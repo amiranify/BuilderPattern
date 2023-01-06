@@ -9,7 +9,7 @@ public class Main {
                 .setAddress("Урюпинск")
                 .build();
         Person son = mom.newChildBuilder()
-                .setName("Арсюша")
+                .setName("Арсений")
                 .setSurname(mom.getSurname())
                 .setAge(3)
                 .setAddress(mom.getAddress())
@@ -20,8 +20,7 @@ public class Main {
                 .setAge(40)
                 .setAddress(mom.getAddress())
                 .build();
-        System.out.println("У " + mom.name + " и "+ dad.name + " " + dad.surname + " есть сын, " + son);
-        System.out.println(dad);
+        System.out.println("У " + mom.name + " и " + dad.name + " " + dad.surname + " есть сын, " + son);
 
         try {
             // Не хватает обязательных полей
