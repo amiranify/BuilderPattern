@@ -17,9 +17,6 @@ public class PersonBuilder {
     }
 
     public PersonBuilder setAge(int age) {
-        if (age < 0 && age > 150) {
-            throw new IllegalArgumentException("Некорректный возраст!");
-        }
         this.age = age;
         return this;
     }
@@ -30,6 +27,9 @@ public class PersonBuilder {
     }
 
     public Person build() {
+        if (age < 0 && age > 150) {
+            throw new IllegalArgumentException("Некорректный возраст!");
+        }
 
         if (name == null) {
             throw new IllegalArgumentException("Укажите имя!");

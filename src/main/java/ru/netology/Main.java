@@ -24,14 +24,15 @@ public class Main {
 
         try {
             // Не хватает обязательных полей
-            new PersonBuilder().build();
+            new PersonBuilder().setName("Анна").setSurname("Вольф").build();
         } catch (IllegalStateException e) {
             e.printStackTrace();
         }
 
+
         try {
             // Возраст недопустимый
-            new PersonBuilder().setAge(-100).build();
+            new PersonBuilder().setName("Анна").setSurname("Вольф").setAge(-100).build();
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
         }
